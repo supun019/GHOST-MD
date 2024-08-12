@@ -66,8 +66,8 @@ if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('Plugins installed successful âœ…')
-console.log('Bot connected to whatsapp âœ…')
+console.log('GHOST-MD Plugins installed successful âœ…')
+console.log('GHOST MD Bot connected to whatsapp âœ…')
 
 let up = `GHOST-MD-BOT connected successful âœ…\n\nPREFIX: ${prefix}`;
 
