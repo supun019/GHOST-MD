@@ -153,7 +153,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 } else if (mek.q && command.on === "text") {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 } else if (
-(command.on === "image" || command.on === "https://telegra.ph/file/a189d4040c4bd9150b7b4.jpg") &&
+(command.on === "image" || command.on === "https://telegra.ph/file/397000a07a1deb7fad9c2.jpg") &&
 mek.type === "imageMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
