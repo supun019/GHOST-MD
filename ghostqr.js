@@ -81,7 +81,7 @@ _Don't Forget To Give Star To My Repo_`
 
 
 					await delay(100);
-					await Qr_Code_By_Wasi_Tech.ws.close();
+					await Qr_Code_By_Ghost_Md.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
