@@ -36,4 +36,4 @@
 - [**❯𝐆𝐇𝐎𝐒𝐓-𝐂𝐎𝐍𝐓𝐀𝐂𝐓-𝐈𝐃❮**](https://wa.me/+94718919262?text=*❝𝙷𝙴𝚈◹𝙶𝙷𝙾𝚂𝚃✗𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙴𝚁❞⛺*)
 -
 ##  PAIRING CODE SCAN
-<a href="https://pair-web-public.koyeb.app/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
+<a href="https://orange-halibut-q7gr5pvqq6v2xw56-8000.app.github.dev/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
