@@ -51,7 +51,7 @@ ${menu.scarch}
 
 POWERD BY GHOST-MD
 .
-await conn.sendMessage(from.{text:madeMenu},{qouted:mek})
+await conn.sendMessage(from.{image:{url:"https://telegra.ph/file/397000a07a1deb7fad9c2.jpg"},caption:madeMenu},{qouted:mek})
 
   
   
