@@ -47,6 +47,7 @@ const {readEnv} = require('./lib/database')
 const config = await readEnv();
 const prefix = config.PREFIX
 //========================================
+        
 console.log("Connecting GHOST-MD bot ðŸ§¬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
