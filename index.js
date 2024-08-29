@@ -17,7 +17,7 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-
+const prefix = '.'
 
 const ownerNumber = ['94741140620']
 
@@ -29,7 +29,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("Session downloaded âœ…")
+console.log("Session downloaded ✅")
 })})}
 
 const express = require("express");
@@ -39,16 +39,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-//============connect mongodb================
-const connectDB = require('./lib/mongodb')
-commectDB();
-//========================================
-const {readEnv} = require('./lib/database')
-const config = await readEnv();
-const prefix = config.PREFIX
-//========================================
-        
-console.log("Connecting GHOST-MD bot ðŸ§¬...");
+console.log("Connecting GHOST-MD BOT ☠️...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -68,19 +59,19 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('GHOST-MD Installing... ')
+console.log('🧬 Installing')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('GHOST-MD Plugins installed successful âœ…')
-console.log('GHOST MD Bot connected to whatsapp âœ…')
+console.log('Plugins installed successful ✅')
+console.log('Bot connected to whatsapp ✅')
 
-let up = `GHOST-MD-BOT connected successful âœ…\n\nPREFIX: ${prefix}`;
+let up = `GHOST-MD connected successful 🤭✅\n\nPREFIX:successful💯${prefix}`;
 
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/a189d4040c4bd9150b7b4.jpg` }, caption: up })
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/397000a07a1deb7fad9c2.jpg` }, caption: up })
 
 }
 })
@@ -90,7 +81,7 @@ conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]
 if (!mek.message) return	
 mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
-if (mek.key && mek.key.remoteJid === 'status@broadcast && config.AUTO_READ_STATUS === "true"') {
+if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
 await conn.readMessages([mek.key])
 }
 const m = sms(conn, mek)
@@ -143,20 +134,14 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
-//owner reacts=================================================================================================
-if(senderNumber.includes("94787438929")){
-if(ifReact) return
-m.react("💀")
-}
-//=============================================================================================================        
-//============================WORK-type================================================ 
+        
+//===================================work-type========================================= 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
-if(!isIwner && ifGroup && config.MODE === "groups") return
-//=====================================================================================
+if(!isOwner && !isGroup && config.MODE === "groups") return
+//================================================
 
 
-        
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -177,7 +162,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 } else if (mek.q && command.on === "text") {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 } else if (
-(command.on === "image" || command.on === "https://telegra.ph/file/397000a07a1deb7fad9c2.jpg") &&
+(command.on === "image" || command.on === "photo") &&
 mek.type === "imageMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
@@ -191,9 +176,9 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey, GHOST-MD bot started ✅");
+res.send("hey, GHOST-MD started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
+}, 4000);
