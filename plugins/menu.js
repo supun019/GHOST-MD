@@ -52,10 +52,12 @@ ${menu.scarch}
 
 POWERD BY GHOST-MD
 `
-await conn.sendMessage(from.{image:{url:config.ALIVE_IMG},caption:madeMenu},{qouted:mek})
+return await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{qouted:mek})
 
   
   
 }catch(e){
 console.log(e)
 reply(`${e}`)
+}
+ })  
