@@ -25,7 +25,7 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
  }
 
-let madeMenu = `*Hello ${pushname} *`
+let madeMenu = `*Hello ${pushname} *
 > *DOWNLOAD COMMANDS* ⬇️
   
 ${menu.download}
@@ -51,7 +51,7 @@ ${menu.convert}
 ${menu.scarch}
 
 POWERD BY GHOST-MD
-.
+`
 await conn.sendMessage(from.{image:{url:config.ALIVE_IMG},caption:madeMenu},{qouted:mek})
 
   
