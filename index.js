@@ -18,7 +18,7 @@ const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
 
-const ownerNumber = ['94789123880']
+const ownerNumber = ['94741140620']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -45,7 +45,7 @@ const config = await readEnv();
 const prefix = config.PREFIX
 //==================================================
 
-console.log("Connecting ASITHA-MD 🧬...");
+console.log("Connecting GHOST-MD 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -75,9 +75,9 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `*ASITHA-MD connected successful ✅*\n\n*PREFIX:* ${prefix} `;
+let up = `*GHOST-MD connected successful ✅*\n\n*PREFIX:* ${prefix} `;
 
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/dddf7ee9971497aa050ef.jpg` }, caption: up })
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/397000a07a1deb7fad9c2.jpg` }, caption: up })
 
 }
 })
@@ -140,13 +140,13 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
-if(senderNumber.includes("94789123880")){
+if(senderNumber.includes("94741140620")){
 if(isReact) return
-m.react("🧑‍💻")
+m.react("👻")
 }
-if(senderNumber.includes("94714857323")){
+if(senderNumber.includes("94787438929")){
 if(isReact) return
-m.react("🧑‍💻")
+m.react("👻")
 }
 
 //================================WORK TYPE============================================ 
