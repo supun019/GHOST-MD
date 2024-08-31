@@ -35,7 +35,7 @@ let down = await fg.yta(url)
 let downloadUrl = down.dl_url
 
 //send audio + document message 
-await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype: "audio/mpeg"},{qouted:mek})
+await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype: "audio/mpeg"},{qouted:mek});
 await conn.sendMessage(from,{document: {url:downloadUrl},mimetype: "audio/mpeg",fileName:data.tatle + ".mp3",caption:"POWERD BY GHOST-MD"},{qouted:mek})
 
 
