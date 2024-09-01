@@ -12,7 +12,7 @@ const alive = async (m, Matrix) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
 
-  const uptimeMessage = `*HANSAMAL-MD Status Overview*
+  const uptimeMessage = `*GHOST-MD Status Overview*
 _________________________________________
 
 *📆 ${days} Day*
