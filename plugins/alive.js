@@ -13,9 +13,9 @@ try{
 
 let des = `👋 𝙷𝚎𝚕𝚕𝚘 𝙸'𝚖 𝚊𝚕𝚒𝚟𝚎 𝚗𝚘𝚠
 
-*Im NETHU-MD Whatsapp Bot Create By Nethu Max* 
+*Im GHOST-MD Whatsapp Bot Create By GHOST-TEAM* 
 
-I am nethu md whatsapp bot. How can I help you.
+I am ghost md whatsapp bot. How can I help you.
 To get the menu, type as menu. If you need to know something about the bot,
 type as owner and direct the question to me. Good day.
 
