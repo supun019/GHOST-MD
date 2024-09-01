@@ -14,10 +14,10 @@ try{
 let dec = `
 
 ╭─────────────━┈⊷
-│👾 ʙᴏᴛ ɴᴀᴍᴇ: 🇸​​🇮​​🇱​​🇻​​🇦​ ​🇪​​🇹​​🇭​​🇮​​🇽​
-│👨‍💻 ᴏᴡɴᴇʀ : ɴᴇᴛʜᴍɪᴋᴀ ᴋᴀᴜꜱʜᴀʟʏᴀ    
-│👤 ɴᴜᴍʙᴇʀ: 94704227534
-│💻 HOSTER: ɴᴇᴛʜᴜ ᴍᴀx
+│👾 ʙᴏᴛ ɴᴀᴍᴇ: ɢʜᴏꜱᴛ-ᴍᴅ
+│👨‍💻 ᴏᴡɴᴇʀ : ɢʜᴏꜱᴛ-ᴍᴅ
+│👤 ɴᴜᴍʙᴇʀ: 94741140620
+│💻 HOSTER: ɢʜᴏꜱᴛ-ᴛᴇᴀᴍ
 │🛡 ᴘʟᴀᴛꜰᴏʀᴍ: Railway
 │💫 ᴘʀᴇғɪx: [Multi-Prefix]
 ╰─────────────━┈⊷ 
@@ -59,9 +59,9 @@ let dec = `
 |✰ .𝚁𝚎𝚙𝚘
 ╰━━━━━━━━━━━━━━━⪼
 
- ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴜ ᴍᴀx
+ ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢʜᴏꜱᴛ-ᴍᴅ
 `
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/586cee3b8ac96722cdec9.jpg`},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/77a5adb1b4462dd384223.jpg`},caption:dec},{quoted:mek});
 
 }catch(e){
 console.log(e)
