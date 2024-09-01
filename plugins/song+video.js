@@ -27,8 +27,7 @@ views:${data.views}
 
 POWERD BY GHOST-MD
 `
-await conn.sendMessage(from,{image: {url:data.thumbnail},caption:desc},{qouted:mek});
-  
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 //download audio 
   
 let down = await fg.yta(url)
