@@ -21,16 +21,16 @@ scarch: ''
 
  for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
+menu[commands[i].category] += `.${config.PREFIX}${commands[i].pattern}\n`;
  }
  }
 
-let madeMenu = `*Hello ${pushname} *
+let madeMenu = `👋*Hello ${pushname} *
 > *DOWNLOAD COMMANDS* ⬇️
   
 ${menu.download}
 
-> *MAIN COMMANDS*🌟
+> *MAIN COMMANDS*👻
 
  ${menu.main}
 
