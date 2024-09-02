@@ -124,7 +124,7 @@ async (conn, mek, m, { from, q, reply, isOwner }) => {
     }
 
     if (key === 'ALIVE_IMG' && !newValue.startsWith('https://')) {
-        return reply("😓 *Invalid URL format. PLEASE GIVE ME IMAGE URL*");
+        return reply("https://telegra.ph/file/397000a07a1deb7fad9c2.jpg");
     }
 
     if (key === 'AUTO_READ_STATUS' && !['true', 'false'].includes(newValue)) {
