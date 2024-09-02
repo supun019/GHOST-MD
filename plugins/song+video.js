@@ -7,6 +7,7 @@ cmd({
     pattern: "song",
     desc: "download songs",
     category: "download ",
+    react: "💿",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -53,6 +54,7 @@ cmd({
     pattern: "video",
     desc: "download videos",
     category: "download ",
+    react: "🎥",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
