@@ -2,98 +2,91 @@ const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
 
-
 cmd({
     pattern: "song",
     desc: "download songs",
-    category: "download ",
-    react: "💿",
+    category: "download",
+    react: "🎵",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title")
+if(!q) return reply("*කරුණාකර Link එකක් හො නමක් ලබා දෙන්න 🔎...*")
 const search = await yts(q)
-const data = search.videos[0];
-const url = data.url 
+const data = search.videos[0]
+const url = data.url
 
-let desc = `
-*GHOST-MD SONG DOWNLOADING....*
+let desc = `*◆ GHOST-MD SONG DOWNLOADING.....◆*
 
-title: ${data.title}
-description :${data.description}
-time:${data.timestamp}
-ago:${data.ago}
-views:${data.views}
+| ➤ TITLE - ${data.title}
 
-POWERD BY GHOST-MD
+| ➤ VIEWS - ${data.views}
+
+| ➤ DESCRIPTION - ${data.description}
+
+| ➤ TIME - ${data.timestamp}
+
+|➤ AGO - ${data.ago}
+
+ ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢʜᴏꜱᴛ-ᴍᴅ
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
-//download audio 
-  
-let down = await fg.yta(url)
+
+//download audio
+
+let down = await fg.yta(url)  
 let downloadUrl = down.dl_url
 
-//send audio + document message 
-await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype: "audio/mpeg"},{qouted:mek});
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype: "audio/mpeg",fileName:data.tatle + ".mp3",caption:"POWERD BY GHOST-MD"},{qouted:mek})
-
-
-  
-
-  
+//send audio
+await conn.sendMessage(from,{audio:{url: downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"audio/mpeg",fileName:data.title + "mp3",caption:"©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴜ ᴍᴀx"},{quoted:mek})
 }catch(e){
-console.log(e)
-reply('s{e}' )
+reply(`${e}`)
 }
 })
 
-//==========video-dl==========
+//===========video-dl===========
 
 cmd({
     pattern: "video",
-    desc: "download videos",
-    category: "download ",
+    desc: "download video",
+    category: "download",
     react: "🎥",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title")
+if(!q) return reply("*කරුණාකර Link එකක් හො නමක් ලබා දෙන්න 🔎...*")
 const search = await yts(q)
-const data = search.videos[0];
-const url = data.url 
+const data = search.videos[0]
+const url = data.url
 
-let desc = `
-*GHOST-MD VIDEO DOWNLOADING....*
+let des = `*◆ GHOST-MD VIDEO DOWNLOADER.....◆*
 
-title: ${data.title}
-description :${data.description}
-time:${data.timestamp}
-ago:${data.ago}
-views:${data.views}
+| ➤ TITLE - ${data.title}
 
-POWERD BY GHOST-MD
+| ➤ VIEWS - ${data.views}
+
+| ➤ DESCRIPTION - ${data.description}
+
+| ➤ TIME - ${data.timestamp}
+
+| ➤ AGO - ${data.ago}
+
+©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢʜᴏꜱᴛ-ᴍᴅ
 `
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{qouted.mek});
-  
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
+
 //download video
-  
-let down = await fg.ytv(url)
+
+let down = await fg.ytv(url)  
 let downloadUrl = down.dl_url
 
-//send video + document message 
-await conn.sendMessage(from,{video: {url:downloadUrl},mimetype: "video/mp4"},{qouted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype: "video/mp4",fileName:data.tatle + ".mp4",caption:"POWERD BY GHOST-MD" },{qouted:mek})
-
-
-
-  
-
-  
-}catch(e){
-console.log(e)
-reply('s{e}' )
+//send video
+await conn.sendMessage(from,{video:{url: downloadUrl},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"video/mp4",fileName:data.title + "mp4",caption:"©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢʜᴏꜱᴛ-ᴍᴅ"},{quoted:mek})
+    
+}catch(a){
+reply(`${a}`)
 }
 })
-
