@@ -11,12 +11,13 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let dec = `╭─────────────━┈⊷
-│👾 ʙᴏᴛ ɴᴀᴍᴇ: ɢʜᴏꜱᴛ-ᴍᴅ
+let dec = `
+
+╭─────────────━┈⊷
+│👾 ʙᴏᴛ ɴᴀᴍᴇ: ɢʜᴏꜱᴛ
 │👨‍💻 ᴏᴡɴᴇʀ : ɢʜᴏꜱᴛ-ᴍᴅ
-│👤 ɴᴜᴍʙᴇʀ: 94741140620
-│💻 HOSTER: ɢʜᴏꜱᴛ-ᴛᴇᴀᴍ
-│🛡 ᴘʟᴀᴛꜰᴏʀᴍ: Railway
+│👤 ɴᴜᴍʙᴇʀ: 9474114062)
+│💻 HOSTER: ɢʜᴏꜱᴛ
 │💫 ᴘʀᴇғɪx: [Multi-Prefix]
 ╰─────────────━┈⊷ 
 ╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
